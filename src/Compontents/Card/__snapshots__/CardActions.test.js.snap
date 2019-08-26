@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardActions Component CardActions with left and right content 1`] = `
+<div
+  className="cardActions"
+>
+  <div
+    className="cardActionsLeft"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Action 1
+       (
+      0
+      )
+    </button>
+  </div>
+  <div
+    className="cardActionsRight"
+  />
+</div>
+`;
+
+exports[`CardActions Component CardActions with left content 1`] = `
+<div
+  className="cardActions"
+>
+  <div
+    className="cardActionsLeft"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Action 1
+       (
+      0
+      )
+    </button>
+  </div>
+</div>
+`;
+
+exports[`CardActions Component CardActions with right content 1`] = `
+<div
+  className="cardActions"
+>
+  <div
+    className="cardActionsRight"
+  />
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardHeading Component whith heading 1`] = `
+<div
+  className="cardHeading"
+>
+  <h2>
+    Card Example
+  </h2>
+</div>
+`;
+
+exports[`CardHeading Component with all props 1`] = `
+<div
+  className="cardHeading"
+>
+  <img
+    alt=""
+    src="https://via.placeholder.com/60x60"
+  />
+  <h2>
+    Card Example
+  </h2>
+  <h3>
+    Demonstration of TDD
+  </h3>
+</div>
+`;
+
+exports[`CardHeading Component with image 1`] = `
+<div
+  className="cardHeading"
+>
+  <img
+    alt=""
+    src="https://via.placeholder.com/60x60"
+  />
+</div>
+`;
+
+exports[`CardHeading Component with sub heading 1`] = `
+<div
+  className="cardHeading"
+>
+  <h3>
+    Demonstration of TDD
+  </h3>
+</div>
+`;

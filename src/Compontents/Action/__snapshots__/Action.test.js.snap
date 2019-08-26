@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card action component Action as favorite - with PostID and Like 1`] = `
+<button
+  onClick={[Function]}
+>
+  <img
+    alt=""
+    className="favoriteIcon"
+    src="Favorite.svg"
+  />
+   (
+  0
+  )
+</button>
+`;
+
+exports[`Card action component Action as share - with PostID and Shared 1`] = `
+<button
+  onClick={[Function]}
+>
+  <img
+    alt=""
+    className="shareIcon"
+    src="Share.svg"
+  />
+   (
+  0
+  )
+</button>
+`;
+
+exports[`Card action component Action with text 1`] = `
+<button
+  onClick={[Function]}
+>
+  Action 1
+   (
+  0
+  )
+</button>
+`;
+
+exports[`Card action component Action without text 1`] = `null`;
