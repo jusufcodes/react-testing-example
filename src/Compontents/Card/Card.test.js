@@ -7,6 +7,10 @@ import {Media} from "../Media/Media";
 import {CardActions} from "./CardActions";
 import {Action, FavoriteAction, ShareAction} from "../Action/Action";
 import {Text} from "../Text/Text";
+import { toMatchImageSnapshot } from "jest-image-snapshot";
+import puppeteer from "puppeteer";
+
+expect.extend({ toMatchImageSnapshot });
 
 const demoHeading = {
   avatar: "https://via.placeholder.com/60x60",
@@ -87,4 +91,37 @@ describe("Card component", () => {
     expect(snapshot).toMatchSnapshot();
   });
 
+  test("Test CSS Regression", async () => {
+    const browser = await puppeteer.launch({
+      headless: true
+    });
+
+    const viewports = {
+      desktop: { width: 1440, height: 900 },
+      ipad: {
+        portrait: { width: 768, height: 1024 },
+        landscape: { width: 1024, height: 768 }
+      }
+    };
+
+    const page = await browser.newPage();
+    await page.goto("http://localhost:3000/Card"); // for localhost:3000 test start dev - yarn start
+
+    /** ipad portrait */
+    await page.setViewport(viewports.desktop);
+    let image = await page.screenshot({fullpage: true});
+    expect(image).toMatchImageSnapshot();
+
+    /** ipad portrait */
+    await page.setViewport(viewports.ipad.portrait);
+    image = await page.screenshot({fullpage: true});
+    expect(image).toMatchImageSnapshot();
+
+    /** ipad landscape */
+    await page.setViewport(viewports.ipad.landscape);
+    image = await page.screenshot({fullpage: true});
+    expect(image).toMatchImageSnapshot();
+
+    browser.close();
+  });
 });
